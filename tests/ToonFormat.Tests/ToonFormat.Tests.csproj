@@ -22,4 +22,37 @@
     <ProjectReference Include="..\..\src\ToonFormat\ToonFormat.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <!-- decode fixtures -->
+    <Content Include="..\..\spec\tests\fixtures\decode\**\*">
+      <!-- How they show up logically in the project / output -->
+      <Link>fixtures\decode\%(RecursiveDir)%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+
+    <!-- encode fixtures -->
+    <Content Include="..\..\spec\tests\fixtures\encode\**\*">
+      <Link>fixtures\encode\%(RecursiveDir)%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+
+    <!-- conversions -->
+    <Content Include="..\..\spec\examples\conversions\**\*">
+      <Link>fixtures\conversions\%(RecursiveDir)%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+
+    <!-- valid examples -->
+    <Content Include="..\..\spec\examples\valid\**\*">
+      <Link>fixtures\valid\%(RecursiveDir)%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+
+    <!-- invalid examples -->
+    <Content Include="..\..\spec\examples\invalid\**\*">
+      <Link>fixtures\invalid\%(RecursiveDir)%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
